@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .cont{
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .cont label{
+            display: block;
+        }
+        .col-6{
+            float: left;
+            padding-left: 20px;
+        }
+        button{
+            margin-bottom: 10px;
+        }
+        #myCanvas{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Transladar</legend>
+            <div class='cont'>
+                <label>X</label>
+                <input id="transX" type='text' value="200" number/>
+            </div>
+            <div class='cont'>
+                <label>Y</label>
+                <input id="transY" type='text' value="-50" number/>
+            </div>
+            <button onclick="transladar(transX.value, transY.value, pol)">Mover</button>
+            <button onclick="transladarUndo()">Undo</button>
+        </fieldset>
+        <fieldset>
+            <legend>Escalar</legend>
+            <div class='cont'>
+                <label>X</label>
+                <input id="escalaX" type='text' value="2" number/>
+            </div>
+            <div class='cont'>
+                <label>Y</label>
+                <input id="escalaY" type='text' value="1" number/>
+            </div>
+            <button onclick="escalar(escalaX.value, escalaY.value, pol)">Origem</button>
+            <button onclick="escalar(escalaX.value, escalaY.value, pol, true)">Local</button>
+        </fieldset>
+        <fieldset>
+            <legend>Rotacionar</legend>
+            <div class='cont'>
+                <label>º</label>
+                <input id="rotGraus" type='text' value="30" number/>
+            </div>
+            <button onclick="Rotacionar(rotGraus.value, pol)">Origem</button>
+            <button onclick="Rotacionar(rotGraus.value, pol, true)">Local</button>
+        </fieldset>
+    </div>
+    <div>
+        <div>
+            &emsp;
+        </div>
+        <button onclick="reset()">Limpar</button>		
+    </div>
+    <canvas id="myCanvas" width="8000" height="6000">
+        Your browser does not support the HTML5 canvas tag.
+	</canvas>
+    <script src="custom.js"></script>
+    <script src="transladar.js"></script>
+    <script src="escalar.js"></script>
+    <script src="rotacionar.js"></script>
+</body>
+</html>
