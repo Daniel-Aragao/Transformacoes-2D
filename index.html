@@ -62,6 +62,19 @@
             <button onclick="Rotacionar(rotGraus.value, pol)">Origem</button>
             <button onclick="Rotacionar(rotGraus.value, pol, true)">Local</button>
         </fieldset>
+        <fieldset>
+            <legend>Cisalhamento</legend>
+            <div class='cont'>
+                <label>X</label>
+                <input id="cisalX" type='text' value="2" number/>
+            </div>
+            <div class='cont'>
+                <label>Y</label>
+                <input id="cisalY" type='text' value="0" number/>
+            </div>
+            <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol)">Cisalhamento</button>
+            <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol, true)">Cisalhamento Local</button>
+        </fieldset>
     </div>
     <div>
         <div>
@@ -76,5 +89,6 @@
     <script src="transladar.js"></script>
     <script src="escalar.js"></script>
     <script src="rotacionar.js"></script>
+    <script src="cisalhamento.js"></script>
 </body>
 </html>
