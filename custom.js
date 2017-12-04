@@ -1,22 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-// a = [
-//     [4,0,0],
-//     [0,2,0],
-//     [0,0,1]
-// ];
-// b = [
-//     [1], [1], [1]
-// ];
-// c = [
-//     [2], [1], [1]
-// ];
-// d = [
-//     [2], [2], [1]
-// ];
-// e = [
-//     [1], [2], [1]
-// ];
+
 (function(){
     this.reset = (function(){
         this.pol = new Poligono();
@@ -83,7 +67,9 @@ function limpar(){
 function lineToJS(reta){
     ctx.beginPath();
     // ctx.strokeStyle = reta.cor;	
-    ctx.moveTo(reta.pInicial.x, reta.pInicial.y);
-    ctx.lineTo(reta.pFinal.x, reta.pFinal.y);
+    oX = Number(origemX.value);
+    oY = Number(origemY.value);
+    ctx.moveTo(oX + reta.pInicial.x, oY + reta.pInicial.y);
+    ctx.lineTo(oX + reta.pFinal.x, oY + reta.pFinal.y);
     ctx.stroke();
 }

@@ -23,6 +23,9 @@
         #myCanvas{
             border:1px solid black;
         }
+        .hidden{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +78,30 @@
             <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol)">Cisalhamento</button>
             <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol, true)">Cisalhamento Local</button>
         </fieldset>
+        <fieldset>
+            <legend>Espelhamento</legend>
+            <div class='cont'>
+                <label>X</label>
+                <input id="espX" type='checkbox' value="-1" number/>
+            </div>
+            <div class='cont'>
+                <label>Y</label>
+                <input id="espY" type='checkbox' value="-1" number/>
+            </div>
+            <button onclick="Espelhamento(espX.checked? espX.value : -espX.value, espY.checked? espY.value : -espY.value, pol)">Espelhamento</button>
+            <button onclick="Espelhamento(espX.checked? espX.value : -espX.value, espY.checked? espY.value : -espY.value, pol, true)">Espelhamento Local</button>
+        </fieldset>
+        <fieldset class="hidden">
+            <legend>Origem</legend>
+            <div class='cont'>
+                <label>X</label>
+                <input id="origemX" type='text' value="0" number/>
+            </div>
+            <div class='cont'>
+                <label>Y</label>
+                <input id="origemY" type='text' value="0" number/>
+            </div>
+        </fieldset>
     </div>
     <div>
         <div>
@@ -90,5 +117,6 @@
     <script src="escalar.js"></script>
     <script src="rotacionar.js"></script>
     <script src="cisalhamento.js"></script>
+    <script src="espelhar.js"></script>
 </body>
 </html>
