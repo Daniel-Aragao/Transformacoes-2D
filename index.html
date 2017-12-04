@@ -15,7 +15,8 @@
         }
         .col-6{
             float: left;
-            padding-left: 20px;
+            /* padding-left: 5%; */
+            min-width: 20%;
         }
         button{
             margin-bottom: 10px;
@@ -26,11 +27,14 @@
         .hidden{
             display: none;
         }
+        .clearfix{
+            clear: both;
+        }
     </style>
 </head>
 <body>
     <div>
-        <fieldset>
+        <fieldset class="col-6">
             <legend>Transladar</legend>
             <div class='cont'>
                 <label>X</label>
@@ -43,7 +47,7 @@
             <button onclick="transladar(transX.value, transY.value, pol)">Mover</button>
             <button onclick="transladarUndo()">Undo</button>
         </fieldset>
-        <fieldset>
+        <fieldset class="col-6">
             <legend>Escalar</legend>
             <div class='cont'>
                 <label>X</label>
@@ -56,7 +60,7 @@
             <button onclick="escalar(escalaX.value, escalaY.value, pol)">Origem</button>
             <button onclick="escalar(escalaX.value, escalaY.value, pol, true)">Local</button>
         </fieldset>
-        <fieldset>
+        <fieldset class="col-6">
             <legend>Rotacionar</legend>
             <div class='cont'>
                 <label>º</label>
@@ -65,7 +69,7 @@
             <button onclick="Rotacionar(rotGraus.value, pol)">Origem</button>
             <button onclick="Rotacionar(rotGraus.value, pol, true)">Local</button>
         </fieldset>
-        <fieldset>
+        <fieldset class="col-6">
             <legend>Cisalhamento</legend>
             <div class='cont'>
                 <label>X</label>
@@ -78,7 +82,7 @@
             <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol)">Cisalhamento</button>
             <button onclick="Cisalhamento(cisalX.value, cisalY.value, pol, true)">Cisalhamento Local</button>
         </fieldset>
-        <fieldset>
+        <fieldset class="col-6">
             <legend>Espelhamento</legend>
             <div class='cont'>
                 <label>X</label>
@@ -103,6 +107,7 @@
             </div>
         </fieldset>
     </div>
+    <div class="clearfix"></div>
     <div>
         <div>
             &emsp;
